@@ -1,0 +1,69 @@
+/* 顶部一楼背景色 */
+
+.most-head{
+  background-color: #333;
+  height: 36px;
+}
+/* 顶部一楼左侧导航栏内容 */
+.head-left, .head-right{
+  padding: 10px 5px !important;
+}
+.head-left:hover, .head-right:hover{
+  color: #fff;
+}
+/* 购物车logo */
+.shopp-logo{
+  width: 20px;
+}
+/* 购物车样式 */
+.shopp-bg{
+  background-color: #888;
+  padding: 6px 11px !important;
+}
+.shopp-bg:hover{
+  background-color: #fff;
+}
+.shopp-font{
+  color: #ff6700;
+}
+.shopp-font:hover{
+  color: #ff6700;
+  text-decoration: none;
+}
+/* 媒体查询最小屏 */
+/* 最小屏左右的占宽 */
+@media screen and (max-width: 575.98px){
+  .col-min-left{
+    width: 25%;
+  }
+  .col-min-right{
+    width: 75%;
+  }
+}
+/* 顶部二楼 */
+/* 二楼左侧小米logo */
+.xm-logo-left{
+  height: 44px;
+  width: 44px;
+}
+.xm-logo-right{
+  height: 44px;
+  width: 120px;
+}
+/* 二楼中部导航栏内容 */
+.dark_gray:hover{
+  color: #ff6700;
+}
+.nav-px{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+/* 二楼右侧搜索框样式 */
+.input-border{
+  border: 1px solid #ff6700;
+}
+.w-input{
+  width: 83%;
+  outline: none;
+  padding: 10px 10px;
+}

@@ -1,0 +1,46 @@
+
+/* 底部一楼字体样式 */
+.foot-one-font{
+  color: #616161;
+}
+/* 底部二楼字体样式 */
+.mg-fontSize{
+  font-size: 15px !important;
+}
+/* 联系客服内容样式 */
+.relation-service{
+  border: 1px solid #ff6700;
+  transition: all .3s linear; 
+}
+.relation-service:hover{
+  text-decoration: none;
+  background-color: #ff6700;
+  color: #fff !important;
+}
+/* 底部三楼  */
+.breadcrumb-item + .breadcrumb-item::before{
+  content: "|";
+  padding: 0px 0px 0px 3px;
+}
+.truste{
+  width: 90px;
+}
+/* 媒体查询显示屏大小 */
+/* 最小屏 */
+@media screen and (max-width: 575.98px){
+  .foot-display{
+    display: none;
+  }
+}
+/* 小屏 */
+@media screen and (max-width: 768.98px){
+  .foot-display{
+    display: none;
+  }
+}
+/* 中屏 */
+@media screen and (max-width: 991px){
+  .col-md-0{
+    border: 0 !important;
+  }
+}
