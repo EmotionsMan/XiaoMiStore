@@ -1,3 +1,5 @@
+/*******************************小米商城数据库*************************************************/
+/*******************************小米商城数据库*************************************************/
 SET NAMES UTF8;
 DROP DATABASE IF EXISTS xiaomi;
 CREATE DATABASE xiaomi CHARSET=UTF8;
@@ -155,7 +157,7 @@ INSERT INTO xm_index_md_show VALUES
 /**********************************************首页展示图大图片*******************************************************/
 /**********************************************首页展示图大图片*******************************************************/
 CREATE TABLE xm_index_lg_show(
-  wid INT PRIMARY KEY AUTO_INCREMENT,              #首页展示图编号
+  gid INT PRIMARY KEY AUTO_INCREMENT,              #首页展示图编号
   lgMap VARCHAR(128)                               #首页展示图大图图片地址
 );
 INSERT INTO xm_index_lg_show VALUES
@@ -168,42 +170,58 @@ INSERT INTO xm_index_lg_show VALUES
 
 /*********************************************首页商品展示************************************************************/
 /*********************************************首页商品展示************************************************************/
-CREATE TABLE xm_index_product(
-  tid INT PRIMARY KEY AUTO_INCREMENT,               #首页商品编号
+/***********手机商品**********/
+CREATE TABLE xm_index_product_phone(
+  pid INT PRIMARY KEY AUTO_INCREMENT,               #首页商品编号
   label VARCHAR(128),                               #首页商品头部小标签
   picture VARCHAR(128),                             #首页商品图片地址
   title VARCHAR(128),                               #首页商品标题
   intro VARCHAR(128),                               #首页商品简介
   price DECIMAL(10, 2)                              #首页商品价格
-
 );
-
-INSERT INTO xm_index_product VALUES
-/***********手机商品**********/
+INSERT INTO xm_index_product_phone VALUES
 (null, null, "image/index/product_show/xmad_15572211624847_jSHgQ.jpg", null, null, null),
 (null, "新品", "image/index/product_show/pms_1550642182.7527088!220x220.jpg", "小米9 6GB+128GB", "骁龙855，索尼4800万超广角微距三摄", 2999),
 (null, "新品", "image/index/product_show/pms_1547020852.30751177!220x220.jpg", "小米9 SE 6GB+64GB", "索尼4800万超广角三摄，骁龙712", 1999),
-(null, "新品", "image/index/product_show/pms_1545457719.47232999!220x220.png", "小米9 SE 6GB+64GB", "5.84“小水滴全面屏，后置1200万", 1999),
-(null, "减200", "image/index/product_show/pms_1550642182.7527088!220x220.jpg", "小米9 6GB+128GB", "潮流镜面渐变色，2400万自拍旗舰", 1699),
-(null, "享8折", "image/index/product_show/pms_1550642182.7527088!220x220.jpg", "小米8 SE 6GB+64GB", "三星 AMOLED 全面屏，骁龙710", 1999),
 (null, "减50", "image/index/product_show/pms_1550642182.7527088!220x220.jpg", "红米6A 2GB+16GB", "12nm高性能处理器，1300万高清相机", 599),
+(null, "新品", "image/index/product_show/pms_1545457719.47232999!220x220.png", "小米9 SE 6GB+64GB", "5.84“小水滴全面屏，后置1200万", 1999),
+(null, "享8折", "image/index/product_show/pms_1550642182.7527088!220x220.jpg", "小米8 SE 6GB+64GB", "三星 AMOLED 全面屏，骁龙710", 1999),
+(null, "减200", "image/index/product_show/pms_1550642182.7527088!220x220.jpg", "小米9 6GB+128GB", "潮流镜面渐变色，2400万自拍旗舰", 1699);
 /**************家电商品**************/
+CREATE TABLE xm_index_product_homeApp(
+  hid INT PRIMARY KEY AUTO_INCREMENT,               #首页商品编号
+  label VARCHAR(128),                               #首页商品头部小标签
+  picture VARCHAR(128),                             #首页商品图片地址
+  title VARCHAR(128),                               #首页商品标题
+  intro VARCHAR(128),                               #首页商品简介
+  price DECIMAL(10, 2)                              #首页商品价格
+);
+INSERT INTO xm_index_product_homeApp VALUES
 (null, null, "image/index/product_show/xmad_15543882240313_PHKGN.jpg", null, null, null),
+(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null),
 (null, "减200", "image/index/product_show/xmad_15512365381648_yZpKS.jpg", "米家互联网洗烘一体机10kg", null, 2199),
 (null, "减500", "image/index/product_show/pms_1545286017.38639954!220x220.jpg", "米家互联网空调(一级能效)", null, 2699),
-(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "15.6“笔记本 i5 4GMX100", null, 4199),
-(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null),
 (null, null, "image/index/product_show/xmad_14972549116226_tZpod.png", "米家空气净化器Pro", "OLED显示屏幕/激光颗粒物传感器", 1499),
+(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "15.6“笔记本 i5 4GMX100", null, 4199),
 (null, null, "image/index/product_show/pms_1504498936.11861982!220x220.jpg", "米家电水壶", "一杯水，是一家人最看重的安心", 99),
 (null, null, "image/index/product_show/pms_1521634907.16181074!220x220.jpg", "小米净水器", null, 1599),
-(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null),
+(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null);
 /****************智能商品*******************/
+CREATE TABLE xm_index_product_capacity(
+  aid INT PRIMARY KEY AUTO_INCREMENT,               #首页商品编号
+  label VARCHAR(128),                               #首页商品头部小标签
+  picture VARCHAR(128),                             #首页商品图片地址
+  title VARCHAR(128),                               #首页商品标题
+  intro VARCHAR(128),                               #首页商品简介
+  price DECIMAL(10, 2)                              #首页商品价格
+);
+INSERT INTO xm_index_product_capacity VALUES
 (null, null, "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null),
+(null, null, "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null),
 (null, "减20", "image/index/product_show/cf6660a3-d424-4248-889f-0eed1e99a342.png", "米家飞利浦智睿台灯", "感知环境光，主动优化场景照明", 199),
+(null, null, "image/index/product_show/pms_1506733860.3164711!220x220.jpg", "车载空气净化器(USB车充版)", "高效净化车内空气", 499),
 (null, "减10", "image/index/product_show/pms_1527754949.17141338!220x220.jpg", "小米手环3", "你身边最好的朋友，时刻关注你", 159),
 (null, null, "image/index/leftnav4-6.png", "米家IH电饭煲4L", "IH电磁环绕加热，超节能小高手", 599),
-(null, null, "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null),
-(null, null, "image/index/product_show/pms_1506733860.3164711!220x220.jpg", "车载空气净化器(USB车充版)", "高效净化车内空气", 499),
 (null, null, "image/index/leftnav8-3.png", "米家声波电动牙刷", "磁悬浮声波马达，定制多种刷牙模式", 99),
 (null, null, "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49),
 (null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null);
