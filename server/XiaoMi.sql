@@ -257,10 +257,10 @@ CREATE TABLE xm_index_buzz(
   price DECIMAL(10, 2)                           #价格
 );
 INSERT INTO xm_index_buzz VALUES
-(null, "image/index/forYouRecommend/xmad_15603251497926_xYEgd.jpg", "快递牛，整体不错蓝牙可以说秒连。红米给力", "117384232", "Redmi AirDots真无线蓝", 99.9),
-(null, "image/index/forYouRecommend/xmad_1560324008766_HNafb.jpg", "离我的小米智能之家又近了一步，安装师傅专业细致，原门锁挡片不是很贴合，师傅免费帮忙换了一片。门锁反应...", "柒期七 ", "小米米家智能门锁 碳素黑", 1199),
-(null, "image/index/forYouRecommend/xmad_15603259571867_NGpLV.jpg", "一到家就忙着安装，太好了，小巧玲珑的，外观精美，洗的照片太好看了", " lhz", "小米米家照片打印机", 479),
-(null, "image/index/forYouRecommend/xmad_15603256677764_hqIlu.jpg", "比想象中还有质感，体验了一下，非常非常满意，支持小米，越来越棒了！！！", "我的六个木", "米家走步机 ", 1799.9);
+(null, "image/index/forYouRecommend/xmad_15603251497926_xYEgd.jpg", "快递牛，整体不错蓝牙可以说秒连。红米给力", "117384232", "Redmi AirDots真无线蓝号号号爱护哦啊好东方", 99.9),
+(null, "image/index/forYouRecommend/xmad_1560324008766_HNafb.jpg", "离我的小米智能之家又近了一步，安装师傅专业细致，原门锁挡片不是很贴合，师傅免费帮忙换了一片。", "柒期七 ", "小米米家智能门锁 碳素黑sdf asdfa sfsdfwe", 1199),
+(null, "image/index/forYouRecommend/xmad_15603259571867_NGpLV.jpg", "一到家就忙着安装，太好了，小巧玲珑的，外观精美，洗的照片太好看了", " lhz", "小米米家照片打印机 sdfa dswae sd", 479),
+(null, "image/index/forYouRecommend/xmad_15603256677764_hqIlu.jpg", "比想象中还有质感，体验了一下，非常非常满意，支持小米，越来越棒了！！！", "我的六个木", "米家走步机 sdfwa dswae sdsdf ", 1799.9);
 
 /****************************************内容***********************************************/
 /****************************************内容***********************************************/
@@ -273,17 +273,17 @@ CREATE TABLE xm_index_content(
   picture VARCHAR(128)                          #图片路径
 );
 INSERT INTO xm_index_content VALUES
-(null, "图书", "哈利·波特与被诅咒的孩子", "“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！", 29.37, "image/index/forYouRecommend/5e5da924-84e3-4959-9e25-5891cdf30757.png"),
-(null, "图书", "好吗好的", "畅销作家大冰2016年新书！讲给你听，好吗好的！", 17.37, "image/index/forYouRecommend/61e1385e-54de-48f3-8717-5e4f4b1cdd14.png"),
+(null, "图书", "哈利·波特与被诅咒的孩子", "“哈利·波特”第八个故事中文版震撼来袭！<br>特别彩排版剧本！", 29.37, "image/index/forYouRecommend/5e5da924-84e3-4959-9e25-5891cdf30757.png"),
+(null, "图书", "好吗好的", "畅销作家大冰2016年新书！<br>讲给你听，好吗好的！", 17.37, "image/index/forYouRecommend/61e1385e-54de-48f3-8717-5e4f4b1cdd14.png"),
 (null, "MIUI主题", "BROWN & FRIENDS定制", "BROWN & FRIENDS 小米定制主题，是LINE FRIENDS在与小米公司", null, "image/index/forYouRecommend/xmad_1554795253_HKsNc.png"),
-(null, "MIUI主题", "电影版《夏目友人帐》主题", "快下载《夏目友人帐》主题拥有最温柔的少年和最可爱的猫咪老师！", null, "image/index/forYouRecommend/xmad_1551940859025_MrKLP.png"),
+(null, "MIUI主题", "电影版《夏目友人帐》主题", "快下载《夏目友人帐》<br>主题拥有最温柔的少年和最可爱的猫咪老师！", null, "image/index/forYouRecommend/xmad_1551940859025_MrKLP.png"),
 (null, "MIUI主题", "《阿丽塔》定制主题", "卡梅隆最新力作，战斗天使机械酷炫来袭！", null, "image/index/forYouRecommend/xmad_1550653044827_BAshe.png"),
-(null, "游戏", "非人学园", "脑洞大开的二次元竞技手游", null, "image/index/forYouRecommend/xmad_15299832299419_eIPOw.png"),
-(null, "游戏", "小米超神", "实力派，一起团！！", null, "image/index/forYouRecommend/xmad_15120234492499_MNEVo.png"),
-(null, "游戏", "米柚手游模拟器", "在电脑上玩遍小米所有手游", null, "image/index/forYouRecommend/T1czW_BXCv1R4cSCrK.png"),
-(null, "应用", "2018金米奖", "最优秀的应用和游戏", null, "image/index/forYouRecommend/3332da7d-4056-4694-9548-c83b7b3af7d3.png"),
+(null, "游戏", "非人学园", "脑洞大开的二次元竞技手游<br>&nbsp;", null, "image/index/forYouRecommend/xmad_15299832299419_eIPOw.png"),
+(null, "游戏", "小米超神", "实力派，一起团！！<br>&nbsp;", null, "image/index/forYouRecommend/xmad_15120234492499_MNEVo.png"),
+(null, "游戏", "米柚手游模拟器", "在电脑上玩遍小米所有手游<br>&nbsp;", null, "image/index/forYouRecommend/T1czW_BXCv1R4cSCrK.png"),
+(null, "应用", "2018金米奖", "最优秀的应用和游戏<br>&nbsp;", null, "image/index/forYouRecommend/3332da7d-4056-4694-9548-c83b7b3af7d3.png"),
 (null, "应用", "Forest", "帮助您专心于生活中每个重要时刻", null, "image/index/forYouRecommend/T1TkKvBCKv1R4cSCrK.png"),
-(null, "应用", "小米应用", "小米出品 必属精品", null, "image/index/forYouRecommend/T15VZvB5Kv1R4cSCrK.png");
+(null, "应用", "小米应用", "小米出品 必属精品<br>&nbsp;", null, "image/index/forYouRecommend/T15VZvB5Kv1R4cSCrK.png");
 
 /************************************视频***************************************************/
 /************************************视频***************************************************/
