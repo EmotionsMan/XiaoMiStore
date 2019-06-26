@@ -110,6 +110,98 @@ section{
 .product-fontsize{
   font-size: 13px;
 }
+/* 七楼热评产品 */
+.buzz-appraisal{
+  font-size: 14px;
+  height: 90px;
+  overflow: hidden;
+}
+.buzz-price{
+  font-size: 14px;
+}
+/* 八楼内容 */
+/* 颜色 */
+.orange{
+  color: #ffac13;
+}
+.orange-border{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid #ffac13;
+}
+.cyan{
+  color: #83c44e;
+}
+.cyan-border{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid #83c44e;
+}
+.red{
+  color: #e53935;
+}
+.red-border{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid #e53935;
+}
+.blue{
+  color: #2196f3;
+}
+.blue-border{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid #2196f3;
+}
+/* 左右箭头样式 */
+.content-icon-div-left, .content-icon-div-right{
+  position: absolute;
+  top: 43%;
+  width: 8%;
+  height: 14%;
+  background-color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .2s linear; 
+}
+div.content div.card:hover .content-icon-div-left, div.content div.card:hover .content-icon-div-right{
+  opacity: 0.4;
+}
+.content-icon-div-left:hover, .content-icon-div-right:hover{
+  opacity: 1 !important;
+}
+.content-icon-div-left{
+  left: 0;
+}
+.content-icon-div-right{
+  right: 0;
+}
+.content-icon-left, .content-icon-right{
+  width: 20px;
+}
+.content-indicator{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin: 23px 15px;
+  background-color: #a0a0a0;
+}
+.content-indicator:hover{
+  background-color: #ff6700; 
+}
+.active{
+  width: 11px;
+  height: 11px;
+  border: 2px solid #ff6700;
+  border-radius: 50%;
+  margin: 21px 11px;
+}
 /***************************媒体查询*************************************/
 /* 超大屏 */
 @media screen and (min-width: 1200px){
@@ -137,6 +229,9 @@ section{
   .product-picture-sm{
     height: 118.5px;
   }
+  .buzz-price, .buzz-appraisal{
+    font-size: 12px;
+  } 
 }
 /* 小屏 */
 @media screen and (max-width: 767px){
@@ -163,6 +258,12 @@ section{
   }
   .product-picture-sm{
     height: 98px;
+  }
+  .buzz-price, .buzz-appraisal{
+    font-size: 8px;
+  } 
+  .buzz-appraisal{
+    height: 55px;
   }
 }
 /* 最小屏 */
