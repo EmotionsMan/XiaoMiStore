@@ -41,7 +41,7 @@ $(function(){
       });
     }
   });
-  // 
+   // 首页手机商品推荐路由
   $.ajax({
     url: '/index/product_phone',
     type: 'get',
@@ -71,7 +71,6 @@ $(function(){
       });
        // 图片路由
       $phonePicture.each(function(index){
-        console.log(index);
         $(this).prop("src", result[index].picture);
       });
        // 标题路由
@@ -92,11 +91,11 @@ $(function(){
       });
     }
   });
+   // 首页家电商品推荐路由
   $.ajax({
     url: '/index/product_homeApp',
     type: 'get',
     success(result){
-      console.log(result);
       // 标签
       var $homeAppLabel = $("div.homeApp div.col-3 div.card span");
       // 图片
@@ -142,11 +141,11 @@ $(function(){
       });
     }
   });
+  // 首页智能商品推荐路由
   $.ajax({
     url: '/index/product_capacity',
     type: 'get',
     success(result){
-      console.log(result);
       // 标签
       var $capacityLabel = $("div.capacity div.col-3 div.card span");
       // 图片
@@ -190,6 +189,144 @@ $(function(){
       $capacityPrice.each(function(index){
         $(this).text("¥" + result[index + 2].price);
       });
+    }
+  });
+  // 首页为你推荐商品展示路由
+  $.ajax({
+    url: '/index/recommend',
+    type: 'get',
+    success(result){
+      var $recommendImg = $("div.recommend div div.card img");
+      var $recommendTitle = $("div.recommend div div.card div p a.text-dark");
+      var $recommendPrice = $("div.recommend div div.card div p.xms");
+      var $recommendGoodReputation = $("div.recommend div div.card div p.mb-3");
+      $recommendImg.each(function(index){
+        $(this).prop("src", result[index].image);
+      });
+      $recommendTitle.each(function(index){
+        $(this).text(result[index].title);
+      });
+      $recommendPrice.each(function(index){
+        $(this).text("¥" + result[index].price);
+      });
+      $recommendGoodReputation.each(function(index){
+        $(this).text(result[index].good_reputation + "人好评");
+      });
+    }
+  });
+  // 首页热评产品商品展示路由
+  $.ajax({
+    url: '/index/buzz',
+    tupe: 'get',
+    success(result){
+      var $buzz = $("div.buzz");
+      var html = "";
+      for(let item of result){
+        html += `
+        <div class="col-3 pr-0 pl-sm-2 pl-md-3">
+          <div class="card border-0 product">
+            <a href="#">
+              <img src="${item.image}" alt="" class="w-100 ">
+            </a>
+            <div class="p-lg-4 p-md-3 p-sm-2">
+              <p class="buzz-appraisal m-0">${item.appraisal}</p>
+              <p class="buzz-userSource sm-fontSize light_gray mb-sm-2 mb-md-3 text-truncate">来自 ${item.userSource} 的评价</p>
+              <p class="m-0 buzz-price d-flex ">
+                <span class="buzz-product text-truncate">${item.product}</span>
+                <span class="light_gray mx-2">|</span>
+                <span class="xms align-self-stretch ">¥${item.price}</span>
+              </p>
+            </div>
+          </div>
+        </div>`;
+      }
+      $buzz.append($(html));
+    }
+  });
+  // 首页内容标题商品展示路由
+  $.ajax({
+    url: '/index/content',
+    type: 'get',
+    success(result){
+      
+      var $content = $("div.content"); //要添加html片段的父元素
+      var html = "",  // 用于存放全部html片段
+          border = "",  //上边框颜色
+          color = "",   //标题字体颜色
+          indicator = "";  //指示符
+      // var bookIndex = 0,
+      //     MIUIIndex = 0,
+      //     gamesIndex = 0,
+      //     applysIndex = 0;
+      var obj = {
+        books: [],
+        MIUI: [],
+        games: [],
+        applys: []
+      }
+      for(let item of result){
+        if(item.theme === "图书"){
+          obj.books.push(item);
+        }else if(item.theme === "MIUI主题"){
+          obj.MIUI.push(item);
+        }else if(item.theme === "游戏"){
+          obj.games.push(item);
+        }else{
+          obj.applys.push(item);
+        }
+      }
+      Object.keys(obj).forEach(key =>{
+        if(obj[key][0].theme == "图书"){
+          border = "orange-border";
+          color = "orange";
+        }else if(obj[key][0].theme == "MIUI主题"){
+          border = "cyan-border";
+          color = "cyan";
+        }else if(obj[key][0].theme == "游戏"){
+          border = "red-border"
+          color = "red";
+        }else{
+          border = "blue-border"
+          color = "blue";
+        }
+        for(var i = 0; i < obj[key].length; i++){
+          if(i == 0){
+            indicator += `<p class="active"></p>`;
+            continue;
+          }
+            indicator += `<p class="content-indicator"></p>`;
+        }
+        html += `
+        <div class="col-3 pr-0 pl-sm-2 pl-md-3">
+          <div class="card text-center product ${border} p-3 rounded-0 position-relative">
+            <div class="content-icon-div-left">
+              <img src="image/index/left.png" class="content-icon-left">
+            </div>
+            <div class="content-icon-div-right">
+              <img src="image/index/right.png" class="content-icon-right">
+            </div>
+            <h6 class="${color}">${obj[key][0].theme}</h6>
+            <h5>${obj[key][0].title}</h5>
+            <p class="sm-fontSize light_gray">${obj[key][0].intro}</p>
+            <p class="sm-fontSize">${obj[key][0].price ? obj[key][0].price + "元" : "&nbsp;"}</p> 
+            <img src="${obj[key][0].picture}" class="w-100">
+            <div class="d-flex justify-content-center indicator">
+              ${indicator}
+            </div>
+          </div>
+        </div>
+        `;
+        indicator = "";
+      })
+    $content.append($(html));
+    }
+  });
+  // 首页视频展示路由
+  $.ajax({
+    url: '/index/video',
+    type: 'get',
+    success(result){
+      console.log(result);
     }
   });
 }) 
