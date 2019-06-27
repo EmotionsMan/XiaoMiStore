@@ -85,5 +85,14 @@ router.get("/content", (req, res) => {
   })
 });
 
+//获取首页视频展示产品路由 --get
+router.get("/video", (req, res) => {
+  var sql = 'SELECT vid, videoSite, video, title, intro FROM xm_index_video';
+  pool.query(sql, (err, result) => {
+    if(err) throw err;
+    res.send(result);
+  });
+});
+
 // 导出路由器
 module.exports = router;
