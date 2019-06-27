@@ -3,11 +3,13 @@ $(function(){
   $.ajax({
     url: '/index/banner',
     type: 'get',
+    dataType: 'json',
     success: function(result) {
       var $parentDiv = $("div.carousel-inner");
       var html = "";
+      var childDiv = "";
       for(let item of result){
-        var childDiv = `
+        childDiv = `
         <div class="carousel-item">
           <a>
             <img src=${item.banner} class="banner">
@@ -23,6 +25,7 @@ $(function(){
   $.ajax({
     url: '/index/md_show',
     type: 'get',
+    dataType: 'json',
     success: function(result){
       var $xmads = $("img.xmad");
       $xmads.each(function(index, elem){
@@ -34,6 +37,7 @@ $(function(){
   $.ajax({
     url: '/index/lg_show',
     type: 'get',
+    dataType: 'json',
     success: function(result){
       var $lgShows = $("div.row div.col-12 a img.w-100");
       $lgShows.each(function(index, elem){
@@ -45,6 +49,7 @@ $(function(){
   $.ajax({
     url: '/index/product_phone',
     type: 'get',
+    dataType: 'json',
     success(result){
       // 标签
       var $phoneLabel = $("div.phone div.col-3 div.card span");
@@ -95,6 +100,7 @@ $(function(){
   $.ajax({
     url: '/index/product_homeApp',
     type: 'get',
+    dataType: 'json',
     success(result){
       // 标签
       var $homeAppLabel = $("div.homeApp div.col-3 div.card span");
@@ -145,6 +151,7 @@ $(function(){
   $.ajax({
     url: '/index/product_capacity',
     type: 'get',
+    dataType: 'json',
     success(result){
       // 标签
       var $capacityLabel = $("div.capacity div.col-3 div.card span");
@@ -195,6 +202,7 @@ $(function(){
   $.ajax({
     url: '/index/recommend',
     type: 'get',
+    dataType: 'json',
     success(result){
       var $recommendImg = $("div.recommend div div.card img");
       var $recommendTitle = $("div.recommend div div.card div p a.text-dark");
@@ -218,6 +226,7 @@ $(function(){
   $.ajax({
     url: '/index/buzz',
     tupe: 'get',
+    dataType: 'json',
     success(result){
       var $buzz = $("div.buzz");
       var html = "";
@@ -247,6 +256,7 @@ $(function(){
   $.ajax({
     url: '/index/content',
     type: 'get',
+    dataType: 'json',
     success(result){
       
       var $content = $("div.content"); //要添加html片段的父元素
@@ -291,14 +301,14 @@ $(function(){
         }
         for(var i = 0; i < obj[key].length; i++){
           if(i == 0){
-            indicator += `<p class="active"></p>`;
+            indicator += `<p class="content-active"></p>`;
             continue;
           }
             indicator += `<p class="content-indicator"></p>`;
         }
         html += `
         <div class="col-3 pr-0 pl-sm-2 pl-md-3">
-          <div class="card text-center product ${border} p-3 rounded-0 position-relative">
+          <div class="card text-center product ${border} p-md-3 p-sm-2 rounded-0 position-relative">
             <div class="content-icon-div-left">
               <img src="image/index/left.png" class="content-icon-left">
             </div>
@@ -306,9 +316,9 @@ $(function(){
               <img src="image/index/right.png" class="content-icon-right">
             </div>
             <h6 class="${color}">${obj[key][0].theme}</h6>
-            <h5>${obj[key][0].title}</h5>
-            <p class="sm-fontSize light_gray">${obj[key][0].intro}</p>
-            <p class="sm-fontSize">${obj[key][0].price ? obj[key][0].price + "元" : "&nbsp;"}</p> 
+            <h5 class="text-truncate ">${obj[key][0].title}</h5>
+            <p class="sm-fontSize light_gray text-truncate mb-2 ">${obj[key][0].intro}</p>
+            <p class="sm-fontSize mb-2">${obj[key][0].price ? obj[key][0].price + "元" : "&nbsp;"}</p> 
             <img src="${obj[key][0].picture}" class="w-100">
             <div class="d-flex justify-content-center indicator">
               ${indicator}
@@ -325,8 +335,27 @@ $(function(){
   $.ajax({
     url: '/index/video',
     type: 'get',
+    dataType: 'json',
     success(result){
-      console.log(result);
+      var $video = $("div.video");
+      var html = "";
+      for(let item of result){
+        html += `
+        <div class="col-3 pr-0 pl-sm-2 pl-md-3 position-relative">
+          <p class="video-icon-bg d-flex justify-content-center align-items-center">
+            <img src="image/index/video/xueyuan-shipinbofang.png" class="video-icon" title="点击播放视频">
+          </p>
+          <div class="card text-center product rounded-0 border-0">
+            <img src="${item.videoSite}" class="w-100">  
+            <div class="p-md-3 p-sm-2 text-truncate">
+              <a href="#" class="dark_gray xms-h md-fontSize ">${item.title}</a>
+              <p class="light_gray sm-fontSize text-truncate">${item.intro}</p>
+            </div>
+          </div>
+        </div>
+        `;
+      }
+      $video.append($(html));
     }
   });
 }) 
