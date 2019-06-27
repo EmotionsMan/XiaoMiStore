@@ -273,9 +273,9 @@ CREATE TABLE xm_index_content(
   picture VARCHAR(128)                          #图片路径
 );
 INSERT INTO xm_index_content VALUES
-(null, "图书", "哈利·波特与被诅咒的孩子", "“哈利·波特”第八个故事中文版震撼来袭！<br>特别彩排版剧本！", 29.37, "image/index/forYouRecommend/5e5da924-84e3-4959-9e25-5891cdf30757.png"),
+(null, "图书", "哈利·波特与被诅咒的孩子", "“哈利·波特”第八个故事中文版震撼来袭！<br>&nbsp;", 29.37, "image/index/forYouRecommend/5e5da924-84e3-4959-9e25-5891cdf30757.png"),
 (null, "图书", "好吗好的", "畅销作家大冰2016年新书！<br>讲给你听，好吗好的！", 17.37, "image/index/forYouRecommend/61e1385e-54de-48f3-8717-5e4f4b1cdd14.png"),
-(null, "MIUI主题", "BROWN & FRIENDS定制", "BROWN & FRIENDS 小米定制主题，是LINE FRIENDS在与小米公司", null, "image/index/forYouRecommend/xmad_1554795253_HKsNc.png"),
+(null, "MIUI主题", "BROWN & FRIENDS定制", "BROWN & FRIENDS 小米定制主题<br>&nbsp;", null, "image/index/forYouRecommend/xmad_1554795253_HKsNc.png"),
 (null, "MIUI主题", "电影版《夏目友人帐》主题", "快下载《夏目友人帐》<br>主题拥有最温柔的少年和最可爱的猫咪老师！", null, "image/index/forYouRecommend/xmad_1551940859025_MrKLP.png"),
 (null, "MIUI主题", "《阿丽塔》定制主题", "卡梅隆最新力作，战斗天使机械酷炫来袭！", null, "image/index/forYouRecommend/xmad_1550653044827_BAshe.png"),
 (null, "游戏", "非人学园", "脑洞大开的二次元竞技手游<br>&nbsp;", null, "image/index/forYouRecommend/xmad_15299832299419_eIPOw.png"),
@@ -289,12 +289,13 @@ INSERT INTO xm_index_content VALUES
 /************************************视频***************************************************/
 CREATE TABLE xm_index_video(
   vid INT PRIMARY KEY AUTO_INCREMENT,               #编号
-  videoSite VARCHAR(128),                           #视频地址
+  videoSite VARCHAR(128),                              #视频海报
+  video VARCHAR(128),                               #视频地址  
   title VARCHAR(128),                               #标题
   intro VARCHAR(128)                                #简介
 );
 INSERT INTO xm_index_video VALUES
-(null, "image/index/forYouRecommend/xmad_15519428237288_Exonu.jpg", "王源 & 小米9 全新广告大片", "好看又能打！我反正被帅到了，Will You？"),
-(null, "image/index/forYouRecommend/xmad_15519291062065_hikIJ.jpg", "雷军对话王源", "聊了3小时，这9个秘密决定公开"),
-(null, "image/index/forYouRecommend/xmad_15519293321746_ChIsr.jpg", "小米MIX 3 磁动力滑盖全面屏", "全新滑盖交互体验，不一样的新感觉"),
-(null, "image/index/forYouRecommend/xmad_15519292842527_ujNMV.jpg", "小米MIX 3 故宫特别版", "传承中华国宝艺术之美");
+(null, "image/index/video/xmad_15519428237288_Exonu.jpg", "image/index/video/12e0189c132e21e064c8161d09816de5.mp4", "王源 & 小米9 全新广告大片", "好看又能打！我反正被帅到了，Will You？"),
+(null, "image/index/video/xmad_15519291062065_hikIJ.jpg", "image/index/video/895d80d9283cb54da04fdc8c5d46f27a.mp4", "雷军对话王源", "聊了3小时，这9个秘密决定公开"),
+(null, "image/index/video/xmad_15519293321746_ChIsr.jpg", "image/index/video/12e0189c132e21e064c8161d09816de5.mp4", "小米MIX 3 磁动力滑盖全面屏", "全新滑盖交互体验，不一样的新感觉"),
+(null, "image/index/video/xmad_15519292842527_ujNMV.jpg", "image/index/video/895d80d9283cb54da04fdc8c5d46f27a.mp4", "小米MIX 3 故宫特别版", "传承中华国宝艺术之美");
