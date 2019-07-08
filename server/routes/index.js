@@ -6,6 +6,14 @@ const pool = require("../pool");
 // 创建路由器
 var router = express.Router();
 
+// 轮播图左边导航中的商品数据路由--get
+router.get("/left_nav_product", (req, res) => {
+  var sql = "SELECT nid, pic, title, ofnumber FROM xm_index_left_nav";
+  pool.query(sql, (err, result) => {
+    if(err) throw err;
+    res.send(result);
+  });
+});
 // 获取首页轮播图数据路由--get
 router.get("/banner", function(req, res){
   var sql = "SELECT banner, bid FROM xm_index_banner";
@@ -93,6 +101,13 @@ router.get("/video", (req, res) => {
     res.send(result);
   });
 });
-
+// 获得首页顶部导航栏商品路由--get 
+router.get("/nav_product", (req, res) => {
+  var sql = 'SELECT intro, pic, title, price, whenfamily FROM xm_index_nav_product';
+  pool.query(sql, (err, result) => {
+    if(err) throw err;
+    res.send(result);
+  })
+})
 // 导出路由器
 module.exports = router;
