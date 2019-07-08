@@ -10,15 +10,36 @@
 div.card{
   border-radius: 0 !important;
 }
+/* 字体图标样式 */
+.icon-style{
+  color: #fff;
+  font-size: 25px;
+}
 /* 一楼左侧导航栏 */
 .left-navbar{
-  background-color: #333;
+  background-color: #555;
+}
+/* 一楼左侧导航栏隐藏的小商品展示 */
+.left-nav-sm-product{
+  width: 0px;
+  height: 442px;
+  background-color: #888;
+  left: 285px;
+  z-index: -1;
+  overflow: hidden;
+  transition: all .3s linear;
+}
+.left-nav-sm-product-ul{
+  display: inline-block;
+  /* 
+  flex-direction: column;
+  justify-content: space-between; */
 }
 /* 一楼右侧轮播图样式 */
 /* 轮播图大小 */
 .banner{
   width: 100%;
-  height: 402px;
+  height: 442px;
 }
 /* 轮播图左右箭头 */
 .carousel-control-next, .carousel-control-prev{
