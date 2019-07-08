@@ -1,16 +1,16 @@
 
   <header class="my-header">
     <div class="most-head">
-      <div class="container p-0">
+      <div class="container p-0 position-relative">
         <!-- 顶部一楼 -->
         <div class="row p-0 m-0">
           <!-- 左侧导航-折叠导航栏 -->
           <div class="col-lg-9 col-sm-2 col-min-left p-0">
             <div class="navbar navbar-expand-lg sm-fontSize p-0">
-              <p class="navbar-toggler p-0 navbar-dark my-btn my-1 ml-3" data-toggle="collapse" data-target="#content">
-                <span class="navbar-toggler-icon btn"></span>
+              <p class="navbar-toggler p-0 navbar-dark my-btn my-1 ml-3" data-toggle="collapse">
+                <span class="navbar-toggler-icon btn" id="myButton"></span>
               </p>
-              <div class="collapse navbar-collapse" id="content">
+              <div class="collapse navbar-collapse">
                 <ul class="navbar-nav p-0">
                   <li class="nav-item">
                     <a href="#" class="nav-link head-left light_gray">小米商城</a>
@@ -43,7 +43,7 @@
                     <a href="#" class="nav-link head-left light_gray">协议规则</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link head-left light_gray">下载app</a>
+                    <a href="#" class="nav-link head-left light_gray nav-download">下载app</a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link head-left light_gray">金融</a>
@@ -76,10 +76,70 @@
             </ul>
           </div>
         </div>
+        <!-- 购物车内容 -->
+        <div class="head-cart position-absolute">
+          <p class="sm-fontSize m-0">购物车中还没有商品，赶紧选购吧!</p>
+        </div>
       </div>  
     </div>
+    <!-- 二维码 -->
+    <div class="position-absolute head-download text-center">
+      <p class="head-trigon m-0"></p>
+      <img src="image/index/download.png" alt="" class="head-qr-card">
+      <p class="mb-2 md-fontSize mt-1">小米商城APP</p>
+    </div>
+    <!-- 视图中屏显示效果 -->
+    <div class=" head-nav position-absolute ">
+      <ul class="nav p-0 sm-fontSize text-center px-4 head-nav-width">
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">小米商城</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">MIUI</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">IOT</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">云服务</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">金融</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull ">有品</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">小爱开放平台</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">企业团购</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">资质证照</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">协议规则</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="head-nav-pull nav-head-download">下载app</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" head-nav-pull">金融</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="head-nav-pull">Select Region</a>
+        </li>
+      </ul>
+    </div>
+    <!-- 视图中屏显示二维码 -->
+    <!-- <div class="position-absolute head-qr text-center">
+        <p class="head-trigon m-0"></p>
+        <img src="image/index/download.png" alt="" class="head-qr-card">
+        <p class="mb-2 md-fontSize mt-1">小米商城APP</p>
+    </div> -->
     <!-- 顶部二楼 -->
-    <div class="container p-0">
+    <div class="container p-0 mt-5 position-relative ">
       <div class="row mt-4 p-0">
         <!-- 二楼左侧小米logo -->
         <div class="col-lg-2 col-sm-12 p-0">
@@ -90,33 +150,33 @@
         </div>
         <!-- 二楼中间导航栏 -->
         <div class="col-lg-7 col-sm-12 p-0  mt-sm-3 mt-lg-0">
-          <ul class="nav mt-1 ml-3 justify-content-center">
+          <ul class="nav mt-1 ml-3 justify-content-center head-nav-host">
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">小米手机</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="10">小米手机</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">红米</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="20">红米</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">电视</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="30">电视</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">笔记本</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="40">笔记本</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">家电</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="50">家电</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">新品</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="60">新品</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">路由器</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height"data-store="70">路由器</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">智能硬件</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="80">智能硬件</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-px dark_gray">服务</a>
+              <a href="#" class="nav-link nav-px dark_gray nav-a-height" data-store="90">服务</a>
             </li>
           </ul>
         </div>
@@ -131,5 +191,13 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class=" px-5 d-flex justify-content-center  position-absolute head-product-show w-100 border-top">
+      <!-- <div class="sm-fontSize text-center head-product-single py-3 pr-3 pl-0">
+        <img src="image/index/leftnav3.png" class="head-product-pic px-5 border-right">
+        <p class="text-dark m-0 mt-3">asdfasd</p>
+        <p class="xms m-0">asdfasdf</p>
+      </div>
+      -->
     </div>
   </header>
