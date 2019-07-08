@@ -1,4 +1,31 @@
 $(function(){
+  // 首页轮播图左边导航
+  $.ajax({
+    url: '/index/left_nav_product',
+    type: 'get',
+    detaType: 'json',
+    success(result){
+      console.log(result);
+      var leftNav = $("div.navbar ul.left-nav-ul");
+      var leftNavProduct = $("div.left-nav-sm-product");
+      var navValue = 0;
+      var html = "";
+      leftNav.on('mouseenter', 'a.left-nav-content', function(){
+        navValue = $(this).attr('data-stock');
+        leftNavProduct.css({
+          'width': 855,
+          'z-index': 9
+        });
+      })
+      leftNav.on('mouseleave', 'a.left-nav-content', function(){
+        leftNavProduct.css({
+          'width': 0,
+          'z-index': -1
+        });
+      })
+    }
+  });
+
   // 首页轮播图路由
   $.ajax({
     url: '/index/banner',
