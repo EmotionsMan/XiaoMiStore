@@ -194,18 +194,51 @@ CREATE TABLE xm_index_product_homeApp(
   picture VARCHAR(128),                             #首页商品图片地址
   title VARCHAR(128),                               #首页商品标题
   intro VARCHAR(128),                               #首页商品简介
-  price DECIMAL(10, 2)                              #首页商品价格
+  price DECIMAL(10, 2),                             #首页商品价格
+  evaluate VARCHAR(128),                            #评价
+  source VARCHAR(64),                                #评价来源
+  isFamilyId SMALLINT                               #所属家族编号         
 );
 INSERT INTO xm_index_product_homeApp VALUES
-(null, null, "image/index/product_show/xmad_15543882240313_PHKGN.jpg", null, null, null),
-(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null),
-(null, "减200", "image/index/product_show/xmad_15512365381648_yZpKS.jpg", "米家互联网洗烘一体机10kg", null, 2199),
-(null, "减500", "image/index/product_show/pms_1545286017.38639954!220x220.jpg", "米家互联网空调(一级能效)", null, 2699),
-(null, null, "image/index/product_show/xmad_14972549116226_tZpod.png", "米家空气净化器Pro", "OLED显示屏幕/激光颗粒物传感器", 1499),
-(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "15.6“笔记本 i5 4GMX100", null, 4199),
-(null, null, "image/index/product_show/pms_1504498936.11861982!220x220.jpg", "米家电水壶", "一杯水，是一家人最看重的安心", 99),
-(null, null, "image/index/product_show/pms_1521634907.16181074!220x220.jpg", "小米净水器", null, 1599),
-(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null);
+(null, null, "image/index/product_show/xmad_15543882240313_PHKGN.jpg", null, null, null, null, null,  10),
+(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null, null, null,  10),
+(null, "减200", "image/index/product_show/xmad_15512365381648_yZpKS.jpg", "米家互联网洗烘一体机10kg", null, 2199, "很满意，非常喜欢，开心", "漩涡鸣人", 10),
+(null, "减500", "image/index/product_show/pms_1545286017.38639954!220x220.jpg", "米家互联网空调(一级能效)", null, 2699, "空调很好，杠杠滴，颜值杠杠滴，帅呆了", "卡卡罗特", 10),
+(null, null, "image/index/product_show/xmad_14972549116226_tZpod.png", "米家空气净化器Pro", "OLED显示屏幕/激光颗粒物传感器", 1499, "很不错，感觉身处大自然", "勇哥", 10),
+(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "15.6“笔记本 i5 4GMX100", null, 4199, "物流很快的，笔记本很流畅，体验超级棒，显示屏很清晰", "路飞", 10),
+(null, null, "image/index/product_show/pms_1504498936.11861982!220x220.jpg", "米家电水壶", "一杯水，是一家人最看重的安心", 99, "水质很不错呦", "胡图图", 10),
+(null, null, "image/index/product_show/pms_1521634907.16181074!220x220.jpg", "小米净水器", null, 1599, null, null, 10),
+(null, "新品", "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 10),
+/*电视*/
+(null, null, "image/index/product_show/xmad_15543882240313_PHKGN.jpg", null, null, null, null, null, 20),
+(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null, null, null, 20),
+(null, "减200", "image/index/product_show/pms_1555935546.09711490!220x220.jpg", "小米壁画电视 65英寸", null, 6999, "挺时尚前卫的，电视柜没到，主机先放箱子上。谢谢雷总及勇哥", "佐助", 20),
+(null, "减500", "image/index/product_show/pms_1555947485.70419235!220x220.jpg", "小米全面屏电视E55A", null, 2699, "品质好，非常喜欢，够大，够强，够气派 正在看～我爱你", "卡卡罗特", 20),
+(null, null, "image/index/product_show/pms_1539315570.63599432!220x220.jpg", "小米电视4X 43英寸", null, 1399, "电视很好，够清晰，这个价格打特价很划算。", "勇哥", 20),
+(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "小米壁画电视 65英寸", null, 4199, "挺时尚前卫的，电视柜没到，主机先放箱子上。谢谢雷总及勇哥", "路飞", 20),
+(null, null, "image/index/product_show/pms_1539315570.63599432!220x220.jpg", "小米电视4X 43英寸", null, 1399, "电视很好，够清晰，这个价格打特价很划算。", "勇哥", 20),
+(null, null, "image/index/product_show/pms_1521634907.16181074!220x220.jpg", "小米净水器", null, 1599, null, null, 20),
+(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 20),
+/*电脑*/
+(null, null, "image/index/product_show/xmad_15543882240313_PHKGN.jpg", null, null, null, null, null, 30),
+(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null, null, null, 30),
+(null, "减200", "image/index/product_show/pms_1533196142.85059414!220x220.png", "13.3'小米笔记本Air 四核i7 8G", null, 2199, "很满意，非常喜欢，开心", "漩涡鸣人", 30),
+(null, "减200", "image/index/product_show/pms_1533196142.85059414!220x220.png", "13.3'小米笔记本Air 四核i7 8G", null, 2199, "很满意，非常喜欢，开心", "漩涡鸣人", 30),
+(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "15.6“笔记本 i5 4GMX100", null, 4199, "物流很快的，笔记本很流畅，体验超级棒，显示屏很清晰", "路飞", 30),
+(null, "新品", "image/index/product_show/xmad_15350951136177_QUuVm.png", "15.6“笔记本 i5 4GMX100", null, 4199, "物流很快的，笔记本很流畅，体验超级棒，显示屏很清晰", "路飞", 30),
+(null, null, "image/index/product_show/pms_1490702347.3628109!220x220.png", "悦米机械键盘", "铝合金机身，TTC红轴，87 键", 199, "很喜欢很给力！希望大家支持", "胡图图", 30),
+(null, null, "image/index/product_show/pms_1521634907.16181074!220x220.jpg", "小米净水器", null, 1599, null, null, 30),
+(null, "新品", "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 30),
+/*家居*/
+(null, null, "image/index/product_show/xmad_15543882240313_PHKGN.jpg", null, null, null, null, null, 40),
+(null, null, "image/index/product_show/xmad_15453810333749_hDsXv.jpg", null, null, null, null, null, 40),
+(null, "减200", "image/index/product_show/xmad_15512365381648_yZpKS.jpg", "米asdfasdfsad洗烘一体机10kg", null, 2199, "很满意，非常喜欢，开心", "漩涡鸣人", 40),
+(null, "减500", "image/index/product_show/pms_1545286017.38639954!220x220.jpg", "米家互联网空调(一级能效)", null, 2699, "空调很好，杠杠滴，颜值杠杠滴，帅呆了", "卡卡罗特", 40),
+(null, null, "image/index/product_show/xmad_14972549116226_tZpod.png", "米家空净化器Pro", "OLED显示屏幕/激光颗粒物传感器", 1499, "很不错，感觉身处大自然", "勇哥", 40),
+(null, "新品", "image/index/product_show/pms_1465366178.11466342!220x220.jpg", "米家恒温电水壶", "水温智能控制，304 不锈钢内胆", 99, "东西非常不错不错不错不错", "路飞", 40),
+(null, null, "image/index/product_show/pms_1504498936.11861982!220x220.jpg", "米家电水壶", "一杯水，是一家人最看重的安心", 99, "水质很不错呦", "胡图图", 40),
+(null, null, "image/index/product_show/pms_1521634907.16181074!220x220.jpg", "小米净水器", null, 1599, null, null, 40),
+(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 40);
 /****************智能商品*******************/
 CREATE TABLE xm_index_product_capacity(
   aid INT PRIMARY KEY AUTO_INCREMENT,               #首页商品编号
@@ -213,18 +246,64 @@ CREATE TABLE xm_index_product_capacity(
   picture VARCHAR(128),                             #首页商品图片地址
   title VARCHAR(128),                               #首页商品标题
   intro VARCHAR(128),                               #首页商品简介
-  price DECIMAL(10, 2)                              #首页商品价格
+  price DECIMAL(10, 2),                             #首页商品价格
+  evaluate VARCHAR(128),                            #评价
+  source VARCHAR(64),                               #评价来源 
+  isFamilyId SMALLINT                               #所属家族编号
 );
 INSERT INTO xm_index_product_capacity VALUES
-(null, null, "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null),
-(null, null, "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null),
-(null, "减20", "image/index/product_show/cf6660a3-d424-4248-889f-0eed1e99a342.png", "米家飞利浦智睿台灯", "感知环境光，主动优化场景照明", 199),
-(null, null, "image/index/product_show/pms_1506733860.3164711!220x220.jpg", "车载空气净化器(USB车充版)", "高效净化车内空气", 499),
-(null, "减10", "image/index/product_show/pms_1527754949.17141338!220x220.jpg", "小米手环3", "你身边最好的朋友，时刻关注你", 159),
-(null, null, "image/index/leftnav4-6.png", "米家IH电饭煲4L", "IH电磁环绕加热，超节能小高手", 599),
-(null, null, "image/index/leftnav8-3.png", "米家声波电动牙刷", "磁悬浮声波马达，定制多种刷牙模式", 99),
-(null, null, "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49),
-(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null);
+(null, null, "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null, null, null,  10),
+(null, null, "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null, null, null,  10),
+(null, "减20", "image/index/product_show/cf6660a3-d424-4248-889f-0eed1e99a342.png", "米家飞利浦智睿台灯", "感知环境光，主动优化场景照明", 199, "灯光很不错", "田老大", 10),
+(null, null, "image/index/product_show/pms_1506733860.3164711!220x220.jpg", "车载空气净化器(USB车充版)", "高效净化车内空气", 499, "车内车外感觉都一样", "秋名山车神", 10),
+(null, "减10", "image/index/product_show/pms_1527754949.17141338!220x220.jpg", "小米手环3", "你身边最好的朋友，时刻关注你", 159, "不错不错不错", "AilLine", 10),
+(null, null, "image/index/leftnav4-6.png", "米家IH电饭煲4L", "IH电磁环绕加热，超节能小高手", 599, "到货非常快，外观很漂亮，非常高大上的米米款锅，身外形很好看，我很喜欢", "红太狼", 10),
+(null, null, "image/index/leftnav8-3.png", "米家声波电动牙刷", "磁悬浮声波马达，定制多种刷牙模式", 99, "目前挺好的，试用一段时间后才知道质量好不好，买了mi很多的商品，都很不错", "洗刷刷", 10),
+(null, null, "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49, null, null, 10),
+(null, "新品", "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 10),
+/*出行*/
+(null, null, "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null, null, null,  20),
+(null, "享八折", "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null, null, null,  20),
+(null, "减20", "image/index/product_show/31ae6df6-b672-491e-ab95-7b83a965c694.png", "电助力折叠自行车", "力矩传感电助力，折叠便式
+", 199, "等了好久，终于本地区有卖，挺好的车，以后汽车放离家远...", "田老大", 20),
+(null, null, "image/index/product_show/pms_1488272686.62666302!220x220.jpg", "小米米家电动滑板车", "极简几何设计，1 分钟轻松上手", 499, "非常好，骑着舒服 速度可以，设计完美，安全系数高。值的拥有", "秋名山车神", 20),
+(null, "减20", "image/index/product_show/31ae6df6-b672-491e-ab95-7b83a965c694.png", "电助力折叠自行车", "力矩传感电助力，折叠便式
+", 199, "等了好久，终于本地区有卖，挺好的车，以后汽车放离家远...", "田老大", 20),
+(null, null, "image/index/product_show/pms_1488272686.62666302!220x220.jpg", "小米米家电动滑板车", "极简几何设计，1 分钟轻松上手", 499, "非常好，骑着舒服 速度可以，设计完美，安全系数高。值的拥有", "秋名山车神", 20),
+(null, "减20", "image/index/product_show/31ae6df6-b672-491e-ab95-7b83a965c694.png", "电助力折叠自行车", "力矩传感电助力，折叠便式
+", 199, "等了好久，终于本地区有卖，挺好的车，以后汽车放离家远...", "田老大", 20),
+(null, null, "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49, null, null, 20),
+(null, "新品", "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 20),
+/*健康*/
+(null, "减20", "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null, null, null,  30),
+(null, null, "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null, null, null,  30),
+(null, "减20", "image/index/product_show/pms_1555659431.52713594!220x220.jpg", "小米体脂秤2", "体脂秤,体脂秤2,秤,体脂,测量体重", 199, "控体重、控体型的首选！4年前买了一个体重秤，现在再来...", "田老大", 30),
+(null, null, "image/index/product_show/pms_1477980865.4569720!220x220.jpg", "米家PM2.5检测仪", "一体黑 OLED 屏，智能联动", 399, "东西很棒哒，已加入米家套餐。马上我就快买齐了所有的米..", "秋名山车神", 30),
+(null, "减20", "image/index/product_show/pms_1555659431.52713594!220x220.jpg", "小米体脂秤2", "体脂秤,体脂秤2,秤,体脂,测量体重", 199, "控体重、控体型的首选！4年前买了一个体重秤，现在再来...", "田老大", 30),
+(null, null, "image/index/product_show/pms_1477980865.4569720!220x220.jpg", "米家PM2.5检测仪", "一体黑 OLED 屏，智能联动", 399, "东西很棒哒，已加入米家套餐。马上我就快买齐了所有的米..", "秋名山车神", 30),
+(null, null, "image/index/leftnav8-3.png", "米家声波电动牙刷", "磁悬浮声波马达，定制多种刷牙模式", 99, "目前挺好的，试用一段时间后才知道质量好不好，买了mi很多的商品，都很不错", "洗刷刷", 30),
+(null, null, "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49, null, null, 30),
+(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 30),
+/*酷玩*/
+(null, null, "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null, null, null,  40),
+(null, "新品", "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null, null, null,  40),
+(null, "减20", "image/index/product_show/pms_1499048837.78256911!220x220.jpg", "米兔积木机器人 履带机甲", "履带底盘，智能操控", 499, "这款非常棒，能搭机器人也能搭灰熊坦克等等，就是有点小...", "田老大", 40),
+(null, null, "image/index/product_show/pms_1515662525.51823819!220x220.jpg", "米兔智能积木", "高效净化车内空气", 199, "动手又动脑，启发孩子创造力", "下午下单，第二天就到了。首先为软件点个赞，无论是界面...", 40),
+(null, "减20", "image/index/product_show/pms_1499048837.78256911!220x220.jpg", "米兔积木机器人 履带机甲", "履带底盘，智能操控", 499, "这款非常棒，能搭机器人也能搭灰熊坦克等等，就是有点小...", "田老大", 40),
+(null, null, "image/index/product_show/pms_1515662525.51823819!220x220.jpg", "米兔智能积木", "高效净化车内空气", 199, "动手又动脑，启发孩子创造力", "下午下单，第二天就到了。首先为软件点个赞，无论是界面...", 40),
+(null, "减20", "image/index/product_show/pms_1499048837.78256911!220x220.jpg", "米兔积木机器人 履带机甲", "履带底盘，智能操控", 499, "这款非常棒，能搭机器人也能搭灰熊坦克等等，就是有点小...", "田老大", 40),
+(null, "新品", "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49, null, null, 40),
+(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 40),
+/*路由器*/
+(null, null, "image/index/product_show/xmad_15407955088238_axybK.jpg", null, null, null, null, null,  50),
+(null, null, "image/index/product_show/xmad_14950995035103_fhWtH.jpg", null, null, null, null, null,  50),
+(null, "减20", "image/index/product_show/pms_1488268224.14952632!220x220.jpg", "小米路由器 Pro", "全新金属机身设计，AC2600双频", 199, "上午下单，下午就到了，高颜值，app很好用，跳pin", "田老大", 50),
+(null, null, "image/index/product_show/pms_1491009389.88616921!220x220.jpg", "小米WiFi电力猫", "有插座的地方 就有WiFi", 499, "我家是多层楼房，成功从三楼引到车库，相当于信号从四楼...", "秋名山车神", 50),
+(null, "减20", "image/index/product_show/pms_1488268224.14952632!220x220.jpg", "小米路由器 Pro", "全新金属机身设计，AC2600双频", 199, "上午下单，下午就到了，高颜值，app很好用，跳pin", "田老大", 50),
+(null, null, "image/index/product_show/pms_1491009389.88616921!220x220.jpg", "小米WiFi电力猫", "有插座的地方 就有WiFi", 499, "我家是多层楼房，成功从三楼引到车库，相当于信号从四楼...", "秋名山车神", 50),
+(null, "减20", "image/index/product_show/pms_1488268224.14952632!220x220.jpg", "小米路由器 Pro", "全新金属机身设计，AC2600双频", 199, "上午下单，下午就到了，高颜值，app很好用，跳pin", "田老大", 50),
+(null, null, "image/index/product_show/pms_1528698828.42759625!220x220.jpg", "小米插线板", null, 49, null, null, 50),
+(null, null, "image/index/product_show/692a6c3b0a93a24f74a29c0f9d68ec71.png", null, null, null, null, null, 50);
 
 /******************************************为你推荐商品*******************************************/
 /******************************************为你推荐商品*******************************************/
@@ -243,6 +322,21 @@ INSERT INTO xm_index_recommend VALUES
 (null, "image/index/forYouRecommend/pms_1556440620.5317961!140x140.jpg", "小米MIX 黑鲨保护壳", 49, 1680),
 (null, "image/index/forYouRecommend/pms_1546936483.22246730!140x140.jpg", "小米数据线", 29, 9410),
 (null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
+(null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
+(null, "image/index/forYouRecommend/pms_1527475006.84551272!140x140.jpg", "小米头戴式耳机", 259, 5920),
+(null, "image/index/forYouRecommend/pms_1526382939.61014552!140x140 (1).jpg", "小米路由4C<", 69, 8600),
+(null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
+(null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
+(null, "image/index/forYouRecommend/pms_1527475006.84551272!140x140.jpg", "小米头戴式耳机", 259, 5920),
+(null, "image/index/forYouRecommend/pms_1526382939.61014552!140x140 (1).jpg", "小米路由4C<", 69, 8600),
+(null, "image/index/forYouRecommend/pms_1524207523.33239844!140x140.jpg", "米家五位五控插线板", 59, 56510),
+(null, "image/index/forYouRecommend/pms_1524207523.33239844!140x140.jpg", "米家五位五控插线板", 59, 56510),
+(null, "image/index/forYouRecommend/pms_1556440620.5317961!140x140.jpg", "小米MIX 黑鲨保护壳", 49, 1680),
+(null, "image/index/forYouRecommend/pms_1546936483.22246730!140x140.jpg", "小米数据线", 29, 9410),
+(null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
+(null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
+(null, "image/index/forYouRecommend/pms_1527475006.84551272!140x140.jpg", "小米头戴式耳机", 259, 5920),
+(null, "image/index/forYouRecommend/pms_1526382939.61014552!140x140 (1).jpg", "小米路由4C<", 69, 8600),
 (null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000),
 (null, "image/index/forYouRecommend/pms_1487579524.92087599!140x140.jpg", "米家空气净化器滤芯", 159, 5000);
 
